@@ -1,0 +1,31 @@
+/* Lista de contactos */
+.contacts-container {
+  padding: 1rem;
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contacts-header h1 {
+  color: var(--text);
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 640px) {
+  .contacts-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

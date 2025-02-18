@@ -1,0 +1,98 @@
+/* Variables globales y reset */
+:root {
+  --yellow-primary: #FFD700;
+  --yellow-light: #FFF3B0;
+  --yellow-dark: #FFB300;
+  --purple-primary: #8B5CF6;
+  --purple-light: #C4B5FD;
+  --purple-dark: #6D28D9;
+  --accent-1: #F59E0B;
+  --accent-2: #7C3AED;
+  --danger: #EF4444;
+  --success: #10B981;
+  --background: #FFFFFF;
+  --text: #1E1B4B;
+  --text-light: #6B7280;
+  --border: rgba(139, 92, 246, 0.2);
+  --shadow-sm: 0 2px 4px rgba(139, 92, 246, 0.1);
+  --shadow: 0 4px 6px rgba(139, 92, 246, 0.1);
+  --shadow-lg: 0 10px 15px rgba(139, 92, 246, 0.1);
+  --gradient: linear-gradient(180deg, var(--yellow-primary) 0%, var(--purple-primary) 100%);
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--gradient);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Layout y navegación */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-link {
+  color: var(--purple-dark);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  background-color: var(--yellow-light);
+  color: var(--purple-dark);
+  transform: translateY(-2px);
+}
+
+/* Animaciones globales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Contenedor principal con fondo semitransparente */
+.main-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
